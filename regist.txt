@@ -1,1 +1,2 @@
+launchctl unload ~/Library/LaunchAgents/JojoTweet.plist
 launchctl load ~/Library/LaunchAgents/JojoTweet.plist

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>Jojo's quote tweet</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/cat</string>
+        <string>/Users/sho/Bot_dev/Twitter/JojoTweet/output.log</string>
+    </array>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/sho/opt/anaconda3/envs/jojo/bin/python</string>
+        <string>/Users/sho/Bot_dev/Twitter/JojoTweet/main.py</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>0</integer>
+        <key>Minute</key>
+        <integer>42</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/sho/Bot_dev/Twitter/JojoTweet/output.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/sho/Bot_dev/Twitter/JojoTweet/error.log</string>
+</dict>
+</plist>
+

@@ -4,7 +4,7 @@ from random import randint
 
 SELECTED_PARTS = ["第1部", "第2部", "第3部", "第4部", "第5部"]
 MAX_WIDTH = 18
-data = pd.read_csv("data.csv")
+data = pd.read_csv("/Users/sho/Bot_dev/Twitter/JojoTweet/data.csv")
 parts = data["parts"]
 quotes = data["quotes"]
 names = data["names"]
