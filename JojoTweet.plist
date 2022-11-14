@@ -14,12 +14,30 @@
         <string>/Users/sho/opt/anaconda3/envs/jojo/bin/python</string>
         <string>/Users/sho/Bot_dev/Twitter/JojoTweet/main.py</string>
     </array>
-    <key>StartInterval</key>
-    <integer>21600</integer>
+		<key>StartCalendarInterval</key>
+	<array>
+		<dict>
+			<key>Hour</key>
+			<integer>8</integer>
+			<key>Minute</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>Hour</key>
+			<integer>12</integer>
+			<key>Minute</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>Hour</key>
+			<integer>18</integer>
+			<key>Minute</key>
+			<integer>0</integer>
+		</dict>
+	</array>
 	<key>StandardOutPath</key>
 	<string>/Users/sho/Bot_dev/Twitter/JojoTweet/output.log</string>
     <key>StandardErrorPath</key>
     <string>/Users/sho/Bot_dev/Twitter/JojoTweet/error.log</string>
 </dict>
 </plist>
-
