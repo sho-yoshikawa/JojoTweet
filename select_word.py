@@ -1,6 +1,8 @@
 import unicodedata as uni
 import pandas as pd
 from random import randint
+from googletrans import Translator
+
 
 SELECTED_PARTS = ["第1部", "第2部", "第3部", "第4部", "第5部"]
 MAX_WIDTH = 18
@@ -11,6 +13,7 @@ names = data["names"]
 scenes = data["scenes"]
 length = len(parts)
 
+trans = Translator()
 
 def getQuoteIndex(length):
 	while True:
@@ -47,8 +50,24 @@ def makeTweetText(quote, part, name, scene):
 	tweet += "(" + part + ": " + name + ")" + "\n\n"
 	tweet += "【場面】" + "\n" + scene
 	if 200 < strlen(tweet):
-		tweet = tweet.replace("ﾆﾌﾞ", "") 
+		tweet = tweet.replace("ﾆﾌﾞ", "")
+	print(tweet)
 	return tweet
+
+def makeTweetTextEn(quote, part, name, scene):
+	quote_en = trans.translate(quote, src="ja", dest="en").text
+	part_en = trans.translate(part, src="ja", dest="en").text
+	name_en = trans.translate(name, src="ja", dest="en").text
+	scene_en = trans.translate(scene, src="ja", dest="en").text
+	tweet_en = "ﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞ" + "\n"
+	tweet_en += makePadding(quote_en) + quote_en  + "\n"
+	tweet_en += "ﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞﾆﾌﾞ" + "\n"
+	tweet_en += "(" + part_en + ": " + name_en + ")" + "\n\n"
+	tweet_en += "【scene】" + "\n" + scene_en
+	if 200 < strlen(tweet_en):
+		tweet_en = tweet_en.replace("ﾆﾌﾞ", "") 
+	print(tweet_en)
+	return tweet_en
 
 
 def trim_newline(index):
@@ -62,6 +81,6 @@ def trim_newline(index):
 def selectWord():
 	index = getQuoteIndex(length)
 	quote, part, name, scene = trim_newline(index)
-	print(quote, part, name, scene)
 	tweet = makeTweetText(quote, part, name, scene)
-	return tweet
+	tweet_en = makeTweetTextEn(quote, part, name, scene)
+	return tweet, tweet_en

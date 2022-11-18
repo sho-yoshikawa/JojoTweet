@@ -1,1 +1,227 @@
 
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f8895134850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8895134850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 19, in <module>
+    tweet_serifu()
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 15, in tweet_serifu
+    client.create_tweet(text=tweet)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 835, in create_tweet
+    return self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 129, in _make_request
+    response = self.request(method, route, params=request_params,
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 84, in request
+    with self.session.request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8895134850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f8895134f10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8895134f10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 23, in <module>
+    tweet_serifu()
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 15, in tweet_serifu
+    client.create_tweet(text=tweet)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 835, in create_tweet
+    return self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 129, in _make_request
+    response = self.request(method, route, params=request_params,
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 84, in request
+    with self.session.request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8895134f10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fea69134850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fea69134850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 19, in <module>
+    tweet_serifu()
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 15, in tweet_serifu
+    client.create_tweet(text=tweet)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 835, in create_tweet
+    return self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 129, in _make_request
+    response = self.request(method, route, params=request_params,
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 84, in request
+    with self.session.request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fea69134850>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fea69134f70>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fea69134f70>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 23, in <module>
+    tweet_serifu()
+  File "/Users/sho/Bot_dev/Twitter/JojoTweet/main.py", line 15, in tweet_serifu
+    client.create_tweet(text=tweet)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 835, in create_tweet
+    return self._make_request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 129, in _make_request
+    response = self.request(method, route, params=request_params,
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/tweepy/client.py", line 84, in request
+    with self.session.request(
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/sho/opt/anaconda3/envs/jojo/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/tweets (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fea69134f70>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
